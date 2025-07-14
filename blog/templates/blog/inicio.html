@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio - Mi Blog</title>
+</head>
+<body>
+    <h1>Bienvenido a mi Blog</h1>
+    
+    <h2>Últimas publicaciones:</h2>
+    
+    <ul>
+        {% for post in posts %}
+            <li>{{ post }}</li>
+        {% endfor %}
+    </ul>
+    
+    <p><a href="/sobre_mi/">Conoce más sobre mí</a></p>
+
+    <footer>Gaby mendez derechos reservados 2025</footer>
+</body>
+</html>
+

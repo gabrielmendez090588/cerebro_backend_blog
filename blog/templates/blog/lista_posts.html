@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog</title>
+</head>
+<body>
+    <h1>Lista de Posts</h1>
+    {% for post in posts %}
+        <article>
+            <h2>{{ post.titulo }}</h2>
+            {% if post.autor|lower == "admin "%}
+                <p>Mensaje del admnistrador</p>
+            {% endif %} 
+            
+            <p>{{ post.contenido|truncatewords:30 }}</p>
+            <a href="">leer mas</a>
+            <small>Autor: {{ post.autor }} | Fecha: {{ post.fecha_creacion }}</small>
+        </article>
+        <hr>
+    {% empty %}
+        <p>No hay posts publicados aún.</p>
+    {% endfor %}
+</body>
+</html>
