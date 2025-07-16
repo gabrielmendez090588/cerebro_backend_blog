@@ -7,8 +7,11 @@
     <h1>Lista de Posts</h1>
     {% for post in posts %}
         <article>
-            <h2>{{ post.titulo }}</h2>
-            {% if post.autor|lower == "admin "%}
+            <h2>
+                <a href="/post/{{ post.id }}/">{{ post.titulo }}</a>
+            </h2>
+            
+            {% if post.autor|lower == "admin" %}
                 <p>Mensaje del admnistrador</p>
             {% endif %} 
             
