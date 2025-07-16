@@ -17,7 +17,11 @@
             
             <p>{{ post.contenido|truncatewords:30 }}</p>
             <a href="">leer mas</a>
-            <small>Autor: {{ post.autor }} | Fecha: {{ post.fecha_creacion }}</small>
+            <small>Autor: {{ post.autor }} | Fecha: {{ post.fecha_creacion }}
+            </small>
+            <br>
+            <small> Categoria: {{ post.categoria}}</small>
+            
         </article>
         <hr>
     {% empty %}
